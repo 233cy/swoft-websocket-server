@@ -73,7 +73,7 @@ class Response implements ResponseInterface
     /**
      * @var bool
      */
-    private $finish = true;
+    private $finish = 1;
 
     /**
      * @var int WebSocket opcode value
@@ -356,7 +356,7 @@ class Response implements ResponseInterface
     /**
      * @return bool
      */
-    public function isFinish(): bool
+    public function isFinish(): int
     {
         return $this->finish;
     }
@@ -366,7 +366,7 @@ class Response implements ResponseInterface
      *
      * @return self
      */
-    public function setFinish(bool $finish): self
+    public function setFinish(int $finish): self
     {
         $this->finish = $finish;
         return $this;
